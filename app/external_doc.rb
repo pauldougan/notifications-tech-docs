@@ -1,8 +1,9 @@
 require 'faraday'
 
 class ExternalDoc
-  def self.fetch(repository:)
-    url = "https://raw.githubusercontent.com/#{repository}/master/DOCUMENTATION.md"
+  def self.fetch(repository:, branch: "master", file: "documentation")
+
+    url = "https://raw.githubusercontent.com/#{repository}/#{branch}/#{file}.md"
 
     response = Faraday.get(url)
 

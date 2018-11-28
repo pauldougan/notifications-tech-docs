@@ -3,7 +3,13 @@ title: Client documentation - GOV.UK Notify
 parent: https://www.notifications.service.gov.uk/documentation
 ---
 
-<%= ExternalDoc.fetch(repository: repo) %>
+<%= ExternalDoc.fetch(repository: repo, branch: "split-markdown-files", file: "documentation/index") %>
+<%= ExternalDoc.fetch(repository: repo, branch: "split-markdown-files", file: "documentation/set_up_client") %>
+<%= ExternalDoc.fetch(repository: repo, branch: "split-markdown-files", file: "documentation/send_msg") %>
+<%= ExternalDoc.fetch(repository: repo, branch: "split-markdown-files", file: "documentation/get_msg_status") %>
+<%= ExternalDoc.fetch(repository: repo, branch: "split-markdown-files", file: "documentation/get_received_text_msg") %>
+<%= ExternalDoc.fetch(repository: repo, branch: "split-markdown-files", file: "documentation/get_template") %>
+
 <%= partial 'documentation/testing' %>
 <%= partial 'documentation/api_keys' %>
 <%= partial 'documentation/limits' %>
